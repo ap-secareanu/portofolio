@@ -1,7 +1,12 @@
 import React from 'react';
 
+const about = document.getElementById('about');
+const exp = document.getElementById('exp');
+const edu = document.getElementById('edu');
+const contact = document.getElementById('contact');
 
-const Header = () => {
+const Header = (props: any) => {
+
   return (
     <header id='header'>
       <div className='container'>
@@ -21,21 +26,27 @@ const Header = () => {
         <nav id='nav'>
           <ul>
             <li>
-              <a className='underline_animation'><span>01.</span>About</a>
+              <a className='underline_animation about' onClick={props.scroll}><span>01.</span>About</a>
             </li>
             <li>
-              <a className='underline_animation'><span>02.</span>Experience</a>
+              <a className='underline_animation exp' onClick={props.scroll}><span>02.</span>Experience</a>
             </li>
             <li>
-              <a className='underline_animation'><span>03.</span>Education</a>
+              <a className='underline_animation edu' onClick={props.scroll}><span>03.</span>Education</a>
             </li>
             <li>
-              <a className='underline_animation'><span>04.</span>Contact</a>
+              <a className='underline_animation contact' onClick={props.scroll}><span>04.</span>Contact</a>
             </li>
           </ul>
-          <a href="docs/assets/files/CV-Alexandru-Secareanu.pdf" className="header_button">Resume</a>
+          <a href="../docs/secareanu_alexandru.pdf" target="_blank" className="header_button">Résumé</a>
         </nav>
+        <button onClick={props.menu} id="hamburger" className="hamburger hamburger--emphatic" type="button">
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
+      <div className="overlay" id="overlay"></div>
     </header>
   );
 };

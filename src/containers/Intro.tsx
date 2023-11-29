@@ -1,8 +1,26 @@
 import React from 'react';
 import BigHeading from '../components/Big_heading';
 import Paragraph from '../components/Paragraph';
+import Big_button from '../components/Big_button';
 
-const Intro = () => {
+const Intro = (props:any) => {
+
+  const goToSection = (e:any) => {
+    e.preventDefault();
+  
+    const about = document.getElementById("about");
+  
+    if(window.innerWidth > 1199) {
+      if(e.target.className.includes('about')) {
+        about?.scrollIntoView({block: 'center'})
+      }
+    } else if(window.innerWidth <= 1199) {
+      if(e.target.className.includes('about')) {
+        about?.scrollIntoView({block: 'start'})
+      }
+    } 
+  }
+
   return (
     <section id='intro'>
       <div className='container'>
@@ -23,6 +41,7 @@ const Intro = () => {
               I thrive in dynamic environments where I can leverage my skills 
               to create innovative and user-friendly applications.
               `]} />
+              <Big_button onClick={goToSection} class={'to_about'} text={'Check out some stuff about me!'} />
           </div>
         </div>
       </div>
