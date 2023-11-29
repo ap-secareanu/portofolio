@@ -267,7 +267,7 @@ footer {
   @media (max-width: 767px) {
     width: 100%;
     animation: none;
-    white-space: normal;
+    white-space: wrap;
   }
 }
 
@@ -281,7 +281,7 @@ footer {
   @media (max-width: 767px) {
     width: 100%;
     animation: none;
-    white-space: normal;
+    white-space: wrap;
   }
 }
 
@@ -344,7 +344,7 @@ footer {
     backdrop-filter: blur(10px);
     background: 0 0;
     position: absolute;
-    top: 94px;
+    top: 60px;
     right: 0;
     display: none;
     z-index: 900;
