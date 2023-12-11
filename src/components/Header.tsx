@@ -1,4 +1,6 @@
 import React from 'react';
+//@ts-ignore
+import Pdf from '../docs/alexandru_secareanu.pdf';
 
 const about = document.getElementById('about');
 const exp = document.getElementById('exp');
@@ -38,7 +40,7 @@ const Header = (props: any) => {
               <a className='underline_animation contact' onClick={props.scroll}><span>04.</span>Contact</a>
             </li>
           </ul>
-          <a href="../docs/secareanu_alexandru.pdf" target="_blank" className="header_button">Résumé</a>
+          <a href={Pdf} target="_blank" className="header_button">Résumé</a>
         </nav>
         <button onClick={props.menu} id="hamburger" className="hamburger hamburger--emphatic" type="button">
           <span className="hamburger-box">
